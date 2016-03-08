@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="app3" ng-cloak >
+  <head>
+    <title>Learning angularJS</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+        display:none;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id = "groceryList" ng-controller="gListCtrl">
+      <h3 class="ListTitle">{{groceries.length}} Groceries to get</h3>
+
+
+    <ol style="margin: 0 0 -15px 0;">
+      <li>{{groceries[0].item}}</li>
+    </ol>
+    <ol start="2">
+      <li ng-repeat="grocery in groceries" ng-if="$index > 0">
+        {{grocery.item}}{{$index}}
+      </li>
+    </ol>
+  </div>
+    <script
+    src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script src="js\exam3.js"> </script>
+  </body>
+</html>
