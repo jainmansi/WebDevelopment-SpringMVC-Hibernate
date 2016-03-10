@@ -10,6 +10,4 @@ app3.controller('myCtrl', function($scope) {
     {item: "Hummus", purchased: false}
   ];
 
-
-
 });

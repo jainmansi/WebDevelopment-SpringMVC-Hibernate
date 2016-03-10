@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1> Mood Selector </h1>
+    <div id="main" ng-app>
+
+	     <nav class="{{active}}" ng-click="$event.preventDefault()">
+		       <a href="#" class="home" ng-click="active='Happy'">Happy</a>
+		       <a href="#" class="projects" ng-click="active='Sad'">Sad</a>
+		       <a href="#" class="services" ng-click="active='Motivated'">Motivated</a>
+		       <a href="#" class="contact" ng-click="active='Dejected'">Dejected</a>
+	    </nav>
+
+	<p ng-hide="active">Please select your mood</p>
+	<p ng-show="active">You chose <b>{{active}}</b></p>
+</div>
+  </body>
+</html>
