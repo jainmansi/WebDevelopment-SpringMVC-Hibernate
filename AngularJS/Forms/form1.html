@@ -1,7 +1,10 @@
 <!doctype html>
 <html ng-app="app5" ng-cloak>
   <head>
-    <title>AngularJS Tutorial 5</title>
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
     [ng\:cloak], [ng-cloak], .ng-cloak {
       display: none;
@@ -18,10 +21,13 @@
     span {
       color: red;
     }
+    form{
+      margin: 50px auto 20px;
+    }
     </style>
   </head>
   <body>
-
+    <center>
     <div ng-controller="userCtrl">
       <form name="userForm" ng-submit="saveUser(userInfo)">
         <label>First Name:</label>
@@ -55,7 +61,7 @@
 
         <label>Street:</label>
 
-        <input type="text" name="street" ng-model="userInfo.street" ng-required="true" ng-minlength="6" ng-pattern="/^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$/" />
+        <input type="text" name="street" ng-model="userInfo.street" ng-required="true" ng-minlength="6" ng-pattern="/^(\d{1,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$/" />
 
         <span class="error-message" ng-show="userForm.street.$dirty && userForm.street.$invalid">
           Must Enter a Number, Street and Street Type (ex: 123 Main St)
@@ -87,11 +93,10 @@
           {{ 'User: ' + item.fName + " " + item.lName + " " + item.street + " " + item.subscribe + " " + item.delivery}}
         </li>
       </ul>
-
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="js/formController.js"></script>
-
+  </center>
   </body>
 </html>
