@@ -9,14 +9,14 @@
     <div id="main" ng-app>
 
 	     <nav class="{{active}}" ng-click="$event.preventDefault()">
-		       <a href="#" class="home" ng-click="active='Happy'">Happy</a>
-		       <a href="#" class="projects" ng-click="active='Sad'">Sad</a>
-		       <a href="#" class="services" ng-click="active='Motivated'">Motivated</a>
-		       <a href="#" class="contact" ng-click="active='Dejected'">Dejected</a>
+		       <a href="#" class="Happy" ng-click="active='Happy'">Happy</a>
+		       <a href="#" class="Sad" ng-click="active='Sad'">Sad</a>
+		       <a href="#" class="Motivated" ng-click="active='Motivated'">Motivated</a>
+		       <a href="#" class="Dejected" ng-click="active='Dejected'">Dejected</a>
 	    </nav>
 
 	<p ng-hide="active">Please select your mood</p>
-	<p ng-show="active">You chose <b>{{active}}</b></p>
+	<p ng-show="active">You are feeling <b>{{active}}</b></p>
 </div>
   </body>
 </html>

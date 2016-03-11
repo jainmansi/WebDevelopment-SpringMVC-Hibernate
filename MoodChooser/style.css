@@ -58,10 +58,10 @@ nav a:last-child{
 	border-radius:0 2px 2px 0;
 }
 
-nav.home .home,
-nav.projects .projects,
-nav.services .services,
-nav.contact .contact{
+nav.Happy .Happy,
+nav.Sad .Sad,
+nav.Motivated .Motivated,
+nav.Dejected .Dejected{
 	background-color:#e35885;
 }
 
